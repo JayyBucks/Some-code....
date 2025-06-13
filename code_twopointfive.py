@@ -1,3 +1,4 @@
+import requests
 out_value = 0
 stop_value = 10
 

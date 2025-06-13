@@ -11,6 +11,11 @@ def lbs_to_kgs():
         except:
             print("ERROR: Please only enter a number!")
     return weight
+
+def lbs_kgs(weight):
+    weight_kgs = weight/2.205
+    return weight_kgs
+
 def positive_float_value():
     while True:
         try:
@@ -24,4 +29,4 @@ def positive_float_value():
     return num
 def main():
     lbs_to_kgs()
-    positive_float_value()
+main()

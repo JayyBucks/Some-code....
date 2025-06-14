@@ -1,15 +1,15 @@
-# dictionary_list = [
-#     {"name": "Carl",
-#      "Tall": False,
-#      "age": 17,
-#      "fit": True},
-#     {"name": "Josh",
-#      "Tall": True,
-#      "age": 16,
-#      "fit": True}
-# ]
-# for dictionary in dictionary_list:
-#     print(dictionary["name"])
+dictionary_list = [
+    {"name": "Carl",
+     "Tall": False,
+     "age": 17,
+     "fit": True},
+    {"name": "Josh",
+     "Tall": True,
+     "age": 16,
+     "fit": True}
+]
+for dictionary in dictionary_list:
+    print(dictionary["name"])
 
 Lamborghini = [
     {"Make": "Lamborghini",

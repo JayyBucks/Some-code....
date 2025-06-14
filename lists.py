@@ -20,21 +20,3 @@ print(list)
 print(len(list))
 print(list[0])
 print(len(list[0]))
-
-
-
-
-
-
-
-
-dictionary = [
-    {"name": "Carl",
-     "Tall": False,
-     "age": 17,
-     "fit": True},
-    {"name": "Josh",
-     "Tall": True,
-     "age": 16,
-     "fit": True}
-]

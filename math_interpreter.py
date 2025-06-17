@@ -11,25 +11,41 @@ print("You must have a space between each value: 'x y z'\n")
 time.sleep(2)
 
 while True:
-    math = float(input("Math Expression: "))
-    if len(math.split()) != 3:
-        print("Invalid format!")
-        print("\nTry again...")
-#needs to have 2 splits or a length of 3: x y z
-#x and z need to be integers
-#y needs to be one of the math operators
-#while True
-    #prompt the user for and expression
-    #use the split() method to get the parts of the expression
-    #check the length of the list treturned from .split
-    #if len(list) not = 3
-        #output Incorrect format message and reprompt(continue)
-    #try:
-        #get X and Y and Z values from the list
-        #and check if X and Z are intergers by converting to int()
-    #except:
-        #output Error message and reprompt
-    #Check that operator is +, -, *, /
-    #if y not in ["+", "-", "*", "/"]:
-        #output Error message and reprompt(continue)
-    
+    try:
+        math = input("Math Expression: ").split() #needs to have 2 splits or a length of 3: x y z
+        if len(math) != 3:
+            print("\nInvalid format!")
+            time.sleep(1)
+            print("\nTry again...\n")
+            time.sleep(1)
+            continue
+        x = int(math[0])
+        y = math[1]
+        z = int(math[2])
+        if y not in ["+", "-", "/", "*"]: #y needs to be one of the math operators
+            print("\nInvalid math operator!")
+            time.sleep(1)
+            print("\nTry again...\n")
+            time.sleep(1)
+            continue
+        if y == "/" and (x == 0 or z == 0):
+            print("\nInvalid input! You can't divide by zero!") 
+            time.sleep(2)
+            print("\nTry again...\n")
+            time.sleep(1)
+        else:
+            break
+    except:
+        print("\nInvalid input! Please enter an integer for x and z!") 
+        time.sleep(2)
+        print("\nTry again...\n")
+        time.sleep(1)
+if y == "/":
+    equation = x / z
+elif y == "*":
+    equation = x * z
+elif y == "+":
+    equation = x + z
+elif y == "-":
+    equation = x - z
+print(f"{int(x)} {y} {int(z)} = {float(equation):.2f}")  

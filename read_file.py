@@ -12,5 +12,5 @@ for line_of_data in data_file: #use a loop to read the contents of the file line
     price = name_price[1]
     #create an entry in the dictionary for the item and price
     menu[name] = price
-
+data_file.close()
 print(menu)

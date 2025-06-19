@@ -1,0 +1,9 @@
+6 Taco(s): $18.00
+3 Burrito(s): $22.50
+8 Bowl(s): $68.00
+Total: $108.50
+8 Burrito(s): $60.00
+12 Bowl(s): $102.00
+3 Taco(s): $9.00
+
+Total: $171.00

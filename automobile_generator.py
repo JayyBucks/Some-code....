@@ -5,7 +5,7 @@ auto2 = Automobile("Ferrari", "F-50", "12345", 4.8, 2022, "Bob", "Black")
 
 auto2.__year = 2024
 
-auto1.owner = "John"
+auto1.__owner = "John"
 
 auto_list = []
 auto_list.append(auto1)

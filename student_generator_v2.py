@@ -70,13 +70,7 @@ Input: None
 Output: list of student dictionaries
 """
 def get_student_dictionaries():
-    #get a list of students
     student_list = load_students()
-    #get a list of student dictionaries
     student_dictionaries = student_to_dictionary(student_list)
-    for student in student_dictionaries:
-        print(student)
-    # print(student_dictionaries)
     return student_dictionaries
 
-get_student_dictionaries()

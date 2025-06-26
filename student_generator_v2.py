@@ -33,8 +33,8 @@ def load_students() -> list[Student]:
         except:
             errorLog(message)
             continue
-        student_id = studentInfo[5]
-        the_student = Student(first_name, last_name, major, credit_hours, gpa, student_id)
+        id = studentInfo[5]
+        the_student = Student(first_name, last_name, major, credit_hours, gpa, id)
         student_list.append(the_student)
         
     return student_list
@@ -59,7 +59,7 @@ def student_to_dictionary(student_list: list[Student]) -> list[dict]:
         student_dictionary['major'] = student.get_major()
         student_dictionary['gpa'] = student.get_gpa()
         student_dictionary['class'] = student.get_class_level()
-        student_dictionary['student_id'] = student.get_student_id()
+        student_dictionary['id'] = student.get_id()
         #append the dictionary to the list of dictionaries
         student_dictionary_list.append(student_dictionary)
     #return the list of dictionaries

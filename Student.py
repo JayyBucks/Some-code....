@@ -1,11 +1,11 @@
 class Student():
-    def __init__(self, first_name, last_name, major, credit_hours, gpa, student_id):
+    def __init__(self, first_name, last_name, major, credit_hours, gpa, id):
         self.__first_name = first_name
         self.__last_name = last_name
         self.__major = major
         self.__credit_hours = credit_hours
         self.__gpa = gpa
-        self.__student_id = student_id
+        self.__id = id.strip()
 
     def get_first_name(self):
         return self.__first_name
@@ -37,15 +37,15 @@ class Student():
     def set_gpa(self, new_gpa:float):
         self.__gpa = float(new_gpa)
 
-    def get_student_id(self):
-        return self.__student_id
+    def get_id(self):
+        return self.__id
 
     def get_class_level(self):
-        if 0 < self.__credit_hours < 30:
+        if 0 < self.__credit_hours <= 30:
             return "Freshman"
-        elif 31 < self.__credit_hours < 60:
+        elif 30 < self.__credit_hours <= 60:
             return "Sophomore"
-        elif 61 < self.__credit_hours < 90:
+        elif 60 < self.__credit_hours <= 90:
             return "Junior"
         elif 90 <= self.__credit_hours:
             return "Senior"
@@ -57,4 +57,4 @@ class Student():
     def printStudentData(self):
         print(f"{self.__first_name} {self.__last_name}")
         print(f"Class Level: {self.get_class_level()}, Major: {self.__major}")
-        print(f"GPA: {self.__gpa}, ID: {self.__student_id}\n")
+        print(f"GPA: {self.__gpa}, ID: {self.__id}")
